@@ -1,0 +1,127 @@
+{
+  "nombre": "Ingeniería Eléctrica",
+  "malla": {
+    "I": [
+      ["Algebra Lineal", 3],
+      ["Calculo 1", 5],
+      ["Expresion Grafica", 3],
+      ["Intro Ingenieria Electrica", 1],
+      ["Competencias comunicativas 1", 3],
+      ["Ingles 1", 0]
+    ],
+    "II": [
+      ["Calculo 2", 4],
+      ["Fisica mecanica", 4],
+      ["Algoritmia 1", 3],
+      ["Competencias comunicativas 2", 3],
+      ["Ciencias de la Vida", 3],
+      ["Ingles 2", 0]
+    ],
+    "III": [
+      ["Ecuaciones", 3],
+      ["Calculo 3", 4],
+      ["Fisica electricidad", 4],
+      ["Historia", 3],
+      ["Sociales", 3],
+      ["Ingles 3", 0]
+    ],
+    "IV": [
+      ["Circuitos 1", 3],
+      ["Fisica calor ondas", 4],
+      ["Teoria Electromagnetica", 3],
+      ["Analisis Datos Ing", 4],
+      ["Estudios del Caribe", 3],
+      ["Ingles 4", 0],
+      ["Seminario de Carrera 1", 0]
+    ],
+    "V": [
+      ["Circuitos 2", 4],
+      ["Electronica 1", 4],
+      ["Sol. Comp. Prob. Ing", 3],
+      ["Termodinamica 1", 3],
+      ["Electiva basica profesional", 3],
+      ["Ingles 5", 0],
+      ["Examen comprehensivo 1", 0]
+    ],
+    "VI": [
+      ["Logica Digital", 3],
+      ["Maquinas Electricas 1", 4],
+      ["Medicion e Instrum.", 3],
+      ["Señales y sistemas", 4],
+      ["Etica", 3],
+      ["Ingles 6", 0]
+    ],
+    "VII": [
+      ["Maquinas Electricas 2", 3],
+      ["Inst. Electricas", 3],
+      ["Elem. de Sis. de Pot.", 3],
+      ["Control Automatico", 4],
+      ["Filosofia", 3],
+      ["Ingles 7", 0]
+    ],
+    "VIII": [
+      ["Protec. Electricas", 3],
+      ["Anal. Sist. de Pot.", 3],
+      ["Subes. Electricas", 3],
+      ["Lin. y Red. de Trans.", 3],
+      ["Gestion", 3],
+      ["Ingles 8", 0]
+    ],
+    "IX": [
+      ["Examen comprehensivo 2", 0],
+      ["Profesional 1", 3],
+      ["Profesional 2", 3],
+      ["Complem. Libre 1", 3],
+      ["Innov. Desar. Socie.", 3],
+      ["Seminario de Carrera 2", 0]
+    ],
+    "X": [
+      ["Proyecto Final", 3],
+      ["Complem. Libre 2", 3],
+      ["Profesional 3", 3],
+      ["Humanidades", 3]
+    ]
+  },
+  "prerequisitos": {
+    "Calculo 2": ["Calculo 1"],
+    "Fisica mecanica": ["Calculo 1"],
+    "Competencias comunicativas 2": ["Competencias comunicativas 1"],
+
+    "Ecuaciones": ["Calculo 2"],
+    "Calculo 3": ["Algebra Lineal", "Calculo 2"],
+    "Fisica electricidad": ["Calculo 2", "Fisica mecanica"],
+
+    "Circuitos 1": ["Algebra Lineal", "Fisica electricidad"],
+    "Fisica calor ondas": ["Calculo 1", "Fisica mecanica"],
+    "Teoria Electromagnetica": ["Fisica electricidad", "Ecuaciones"],
+    "Analisis Datos Ing": ["Calculo 2"],
+
+    "Ingles 2": ["Ingles 1"],
+    "Ingles 3": ["Ingles 2"],
+    "Ingles 4": ["Ingles 3"],
+    "Ingles 5": ["Ingles 4"],
+    "Ingles 6": ["Ingles 5"],
+    "Ingles 7": ["Ingles 6"],
+    "Ingles 8": ["Ingles 7"],
+
+    "Examen comprehensivo 1": ["Ecuaciones", "Calculo 3", "Fisica mecanica", "Fisica electricidad", "Fisica calor ondas"],
+    "Circuitos 2": ["Circuitos 1"],
+    "Electronica 1": ["Circuitos 1"],
+    "Sol. Comp. Prob. Ing": ["Ecuaciones", "Algoritmia 1"],
+    "Termodinamica 1": ["Fisica calor ondas"],
+
+    "Logica Digital": ["Circuitos 1"],
+    "Maquinas Electricas 1": ["Circuitos 2", "Teoria Electromagnetica"],
+    "Medicion e Instrum.": ["Circuitos 2", "Electronica 1"],
+    "Señales y sistemas": ["Examen comprehensivo 1", "Ecuaciones"],
+
+    "Maquinas Electricas 2": ["Maquinas Electricas 1", "Termodinamica 1"],
+    "Inst. Electricas": ["Maquinas Electricas 1"],
+    "Elem. de Sis. de Pot.": ["Maquinas Electricas 1", "Sol. Comp. Prob. Ing", "Señales y sistemas"],
+    "Control Automatico": ["Señales y sistemas", "Medicion e Instrum."],
+
+    "Anal. Sist. de Pot.": ["Elem. de Sis. de Pot."],
+
+    "Proyecto Final": ["Examen comprehensivo 2", "Anal. Sist. de Pot.", "Ingles 8", "Protec. Electricas", "Subes. Electricas", "Lin. y Red. de Trans.", "Control Automatico"]
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "nombre": "Ingeniería Civil",
+  "malla": {
+    "I": [
+      ["Álgebra lineal", 3],
+      ["Cálculo 1", 5],
+      ["Expresión gráfica", 3],
+      ["Introducción a la ingeniería", 1],
+      ["Competencias 1", 3],
+      ["Inglés 1", 0]
+    ],
+    "II": [
+      ["Cálculo 2", 4],
+      ["Física mecánica", 4],
+      ["Algoritmia 1", 3],
+      ["Química", 3],
+      ["Competencias 2", 3],
+      ["Inglés 2", 0]
+    ],
+    "III": [
+      ["Cálculo 3", 4],
+      ["Ecuaciones", 3],
+      ["Física calor", 4],
+      ["Topografía", 3],
+      ["Estática", 3],
+      ["Inglés 3", 0]
+    ],
+    "IV": [
+      ["Análisis de datos", 4],
+      ["Física eléctrica", 4],
+      ["Mecánica de sólidos", 3],
+      ["Geología", 3],
+      ["Electiva estudios Caribe", 3],
+      ["Inglés 4", 0],
+      ["Seminario 1", 0]
+    ],
+    "V": [
+      ["Electiva ciencias básicas", 3],
+      ["Electiva básica profesional", 3],
+      ["Materiales de construcción", 3],
+      ["Soluciones computacionales", 3],
+      ["Mecánica de fluidos", 3],
+      ["Examen comprehensivo 1", 0],
+      ["Inglés 5", 0]
+    ],
+    "VI": [
+      ["Formulación de proyectos", 3],
+      ["Electiva historia", 3],
+      ["Análisis estructural", 3],
+      ["Mecánica de suelos", 3],
+      ["Hidrología", 3],
+      ["Inglés 6", 0]
+    ],
+    "VII": [
+      ["Diseño de vías", 3],
+      ["Construcción", 3],
+      ["Diseño estructural", 3],
+      ["Fundaciones", 3],
+      ["Hidráulica", 3],
+      ["Inglés 7", 0]
+    ],
+    "VIII": [
+      ["Ingeniería de transporte", 3],
+      ["Administración y control de la construcción", 3],
+      ["Ingeniería ambiental", 3],
+      ["Electiva ética", 3],
+      ["Acueducto y alcantarillado", 3],
+      ["Electiva innovación", 3],
+      ["Inglés 8", 0]
+    ],
+    "IX": [
+      ["Electiva profesional 1", 3],
+      ["Electiva profesional 2", 3],
+      ["Electiva formación complementaria 1", 3],
+      ["Electiva filosofía", 3],
+      ["Electiva sociales", 3],
+      ["Examen comprehensivo 2", 0],
+      ["Seminario 2", 0]
+    ],
+    "X": [
+      ["Electiva humanidades", 3],
+      ["Electiva profesional 3", 3],
+      ["Proyecto final", 3],
+      ["Electiva formación complementaria 2", 3]
+    ]
+  },
+  "prerequisitos": {
+    "Cálculo 2": ["Cálculo 1"],
+    "Física mecánica": ["Cálculo 1"],
+    "Competencias 2": ["Competencias 1"],
+    "Cálculo 3": ["Álgebra lineal", "Cálculo 2"],
+    "Física calor": ["Cálculo 1", "Física mecánica"],
+    "Estática": ["Física mecánica"],
+    "Topografía": ["Expresión gráfica"],
+    "Ecuaciones": ["Cálculo 2"],
+    "Inglés 2": ["Inglés 1"],
+    "Inglés 3": ["Inglés 2"],
+    "Inglés 4": ["Inglés 3"],
+    "Inglés 5": ["Inglés 4"],
+    "Inglés 6": ["Inglés 5"],
+    "Inglés 7": ["Inglés 6"],
+    "Inglés 8": ["Inglés 7"],
+    "Análisis de datos": ["Cálculo 2"],
+    "Física eléctrica": ["Cálculo 2", "Física mecánica"],
+    "Mecánica de sólidos": ["Estática"],
+    "Materiales de construcción": ["Mecánica de sólidos"],
+    "Soluciones computacionales": ["Ecuaciones", "Algoritmia 1"],
+    "Mecánica de fluidos": ["Ecuaciones"],
+    "Examen comprehensivo 1": ["Ecuaciones", "Cálculo 3", "Física mecánica", "Física calor", "Física eléctrica"],
+    "Análisis estructural": ["Mecánica de sólidos", "Examen comprehensivo 1"],
+    "Mecánica de suelos": ["Mecánica de sólidos", "Geología", "Examen comprehensivo 1"],
+    "Hidrología": ["Análisis de datos"],
+    "Diseño de vías": ["Topografía"],
+    "Construcción": ["Materiales de construcción"],
+    "Diseño estructural": ["Análisis estructural"],
+    "Fundaciones": ["Mecánica de suelos"],
+    "Hidráulica": ["Mecánica de fluidos"],
+    "Ingeniería de transporte": ["Diseño de vías"],
+    "Administración y control de la construcción": ["Construcción"],
+    "Acueducto y alcantarillado": ["Hidráulica"],
+    "Proyecto final": [
+      "Ingeniería de transporte",
+      "Acueducto y alcantarillado",
+      "Administración y control de la construcción",
+      "Examen comprehensivo 2",
+      "Inglés 8"
+    ]
+  }
+}
+

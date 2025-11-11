@@ -1,0 +1,142 @@
+{
+  "nombre": "Ingeniería Electrónica",
+  "malla": {
+    "I": [
+      ["Algebra Lineal", 3],
+      ["Calculo 1", 5],
+      ["Expresion Grafica", 3],
+      ["Intro Ing. Electronica", 1],
+      ["Competencias comunicativas 1", 3],
+      ["Ingles 1", 0]
+    ],
+    "II": [
+      ["Calculo 2", 4],
+      ["Fisica mecanica", 4],
+      ["Algoritmia 1", 3],
+      ["Competencias comunicativas 2", 3],
+      ["Ciencias de la Vida", 3],
+      ["Ingles 2", 0]
+    ],
+    "III": [
+      ["Calculo 3", 4],
+      ["Ecuaciones", 3],
+      ["Fisica electricidad", 4],
+      ["Estudios del Caribe", 3],
+      ["Ciencias Sociales", 3],
+      ["Ingles 3", 0]
+    ],
+    "IV": [
+      ["Teoria Electromagnetica", 3],
+      ["Fisica calor ondas", 4],
+      ["Sol. Comp. Prob. Ing.", 3],
+      ["Circuitos 1", 3],
+      ["Historia", 3],
+      ["Ingles 4", 0],
+      ["Seminario de Carrera 1", 0]
+    ],
+    "V": [
+      ["Analisis Datos Ing.", 4],
+      ["Circuitos 2", 4],
+      ["Electronica 1", 4],
+      ["Basica Profesional", 3],
+      ["Ingles 5", 0],
+      ["Examen comprehensivo 1", 0]
+    ],
+    "VI": [
+      ["Medios de Transm.", 3],
+      ["Maquinas Electricas 1", 4],
+      ["Logica Digital", 3],
+      ["Electronica 2", 3],
+      ["Señales y sistemas", 4],
+      ["Ingles 6", 0]
+    ],
+    "VII": [
+      ["Comunicaciones", 4],
+      ["Medicion. e Instrum.", 3],
+      ["Electronica 3", 3],
+      ["Microprocesadores", 3],
+      ["Etica", 3],
+      ["Ingles 7", 0]
+    ],
+    "VIII": [
+      ["Telematica", 3],
+      ["Control Automatico", 4],
+      ["Diseño Electronico", 2],
+      ["Microcontroladores", 3],
+      ["Electiva gestion", 3],
+      ["Ingles 8", 0]
+    ],
+    "IX": [
+      ["Complem. Libre 1", 3],
+      ["Profesional 1", 3],
+      ["Profesional 2", 3],
+      ["Innov. Desar. Socie.", 3],
+      ["Filosofia", 3],
+      ["Seminario de Carrera 2", 0],
+      ["Examen comprehensivo 2", 0]
+    ],
+    "X": [
+      ["Proyecto Final", 3],
+      ["Complem. Libre 2", 3],
+      ["Profesional 3", 3],
+      ["Humanidades", 3]
+    ]
+  },
+  "prerequisitos": {
+    "Calculo 2": ["Calculo 1"],
+    "Fisica mecanica": ["Calculo 1"],
+    "Competencias comunicativas 2": ["Competencias comunicativas 1"],
+
+    "Ecuaciones": ["Calculo 2"],
+    "Calculo 3": ["Algebra Lineal", "Calculo 2"],
+    "Fisica electricidad": ["Calculo 2", "Fisica mecanica"],
+
+    "Circuitos 1": ["Algebra Lineal", "Fisica electricidad"],
+    "Fisica calor ondas": ["Calculo 1", "Fisica mecanica"],
+    "Teoria Electromagnetica": ["Fisica electricidad", "Ecuaciones"],
+    "Sol. Comp. Prob. Ing.": ["Ecuaciones", "Algoritmia 1"],
+
+    "Ingles 2": ["Ingles 1"],
+    "Ingles 3": ["Ingles 2"],
+    "Ingles 4": ["Ingles 3"],
+    "Ingles 5": ["Ingles 4"],
+    "Ingles 6": ["Ingles 5"],
+    "Ingles 7": ["Ingles 6"],
+    "Ingles 8": ["Ingles 7"],
+
+    "Examen comprehensivo 1": [
+      "Ecuaciones",
+      "Calculo 3",
+      "Fisica mecanica",
+      "Fisica electricidad",
+      "Fisica calor ondas"
+    ],
+    "Circuitos 2": ["Circuitos 1"],
+    "Electronica 1": ["Circuitos 1"],
+    "Analisis Datos Ing.": ["Calculo 2"],
+
+    "Logica Digital": ["Circuitos 1"],
+    "Electronica 2": ["Circuitos 2", "Electronica 1", "Examen comprehensivo 1"],
+    "Maquinas Electricas 1": ["Circuitos 2", "Teoria Electromagnetica"],
+    "Medios de Transm.": ["Teoria Electromagnetica"],
+    "Señales y sistemas": ["Examen comprehensivo 1", "Ecuaciones"],
+
+    "Microprocesadores": ["Logica Digital"],
+    "Electronica 3": ["Electronica 2"],
+    "Medicion. e Instrum.": ["Circuitos 2", "Electronica 1"],
+    "Comunicaciones": ["Señales y sistemas", "Analisis Datos Ing."],
+
+    "Microcontroladores": ["Microprocesadores"],
+    "Diseño Electronico": ["Electronica 3"],
+    "Telematica": ["Medios de Transm.", "Comunicaciones"],
+    "Control Automatico": ["Señales y sistemas", "Medicion. e Instrum."],
+
+    "Proyecto Final": [
+      "Examen comprehensivo 2",
+      "Diseño Electronico",
+      "Ingles 8",
+      "Control Automatico",
+      "Telematica"
+    ]
+  }
+}
