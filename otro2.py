@@ -36,7 +36,7 @@ class VentanaInicio:
         # ComboBox para seleccionar carrera
         self.carreras = [
             "Seleccione",
-            "Ingenieria de sistemas",
+            "Ingenieria de Sistemas",
             "Ingenieria Civil",
             "Ingenieria Mecánica",
             "Ingenieria Electrica",
@@ -107,7 +107,7 @@ class VentanaInicio:
         
         # Mapeo de nombres de carreras a nombres de archivos JSON
         mapeo_archivos = {
-            "Ingenieria de sistemas": "Sistemas.json",
+            "Ingenieria de Sistemas": "Sistemas.json",
             "Ingenieria Civil": "Civil.json",
             "Ingenieria Mecánica": "Mecanica.json",
             "Ingenieria Electrica": "Electrica.json",
@@ -118,7 +118,7 @@ class VentanaInicio:
         nombre_archivo = mapeo_archivos.get(carrera_seleccionada)
         
         # Debug: mostrar ruta actual y archivos disponibles
-        ruta_actual = 'OneDrive/Desktop/Malla interactiva python'
+        ruta_actual = 'OneDrive/Desktop/Malla_interactiva_python'
         archivos_disponibles = os.listdir(ruta_actual)
         
         print(f"Ruta actual: {ruta_actual}")
@@ -185,128 +185,6 @@ class MallaCurricular:
                 "Advertencia",
                 f"No se pudo cargar el archivo. Usando malla por defecto.\nError: {str(e)}"
             )
-            self.prerequisitos = {
-                "Calculo 2": ["Calculo 1"],
-                "Calculo 3": ["Algebra lineal", "Calculo 2"],
-                "Fisica mecanica": ["Calculo 1"],
-                "Fisica calor ondas": ["Calculo 1", "Fisica mecanica"],
-                "Fisica electricidad": ["Calculo 2", "Fisica mecanica"],
-                "Algoritmia y programacion 2": ["Algoritmia y programacion 1"],
-                "Competencias comunicativas 2": ["Competencias comunicativas 1"],
-                "Ingles 2": ["Ingles 1"],
-                "Ingles 3": ["Ingles 2"],
-                "Ingles 4": ["Ingles 3"],
-                "Ingles 5": ["Ingles 4"],
-                "Ingles 6": ["Ingles 5"],
-                "Ingles 7": ["Ingles 6"],
-                "Ingles 8": ["Ingles 7"],
-                "Ecuaciones Diferenciales": ["Calculo 2"],
-                "Analisis de datos": ["Calculo 2"],
-                "Estructuras de datos 1": ["Algoritmia y programacion 2"],
-                "POO": ["Algoritmia y programacion 2"],
-                "Estructuras de datos 2": ["Estructuras de datos 1"],
-                "Examen comprehensivo 1": ["Ecuaciones Diferenciales", "Calculo 3", "Fisica mecanica", "Fisica calor ondas", "Fisica electricidad"],
-                "Compiladores": ["POO", "Estructuras de datos 2"],
-                "Soluciones computacionales": ["Ecuaciones Diferenciales"],
-                "Algoritmos y complejidad": ["Estructuras de datos 2"],
-                "Estructuras discretas": ["Matematicas discretas"],
-                "Diseño digital": ["Matematicas discretas"],
-                "Optimizacion": ["Analisis de datos", "Soluciones computacionales"],
-                "Bases de datos": ["Algoritmos y complejidad"],
-                "Estructura del computador 1": ["Diseño digital"],
-                "Diseño de software 1": ["Bases de datos"],
-                "Electiva en redes": ["Redes"],
-                "Sistemas operativos": ["Estructura del computador 1"],
-                "Estructura del computador 2": ["Estructura del computador 1"],
-                "Diseño de software 2": ["Diseño de software 1"],
-                "Examen comprehensivo 2": ["Examen comprehensivo 1"],
-                "Proyecto final": ["Diseño de software 2", "Examen comprehensivo 2", "Ingles 8"]
-            }
-            
-            self.malla = {
-                "I": [
-                    ("Algebra lineal", 3),
-                    ("Calculo 1", 5),
-                    ("Introduccion a la ingenieria de sistemas", 1),
-                    ("Algoritmia y programacion 1", 3),
-                    ("Competencias comunicativas 1", 3),
-                    ("Ingles 1", 0)
-                ],
-                "II": [
-                    ("Electiva historia", 3),
-                    ("Calculo 2", 4),
-                    ("Fisica mecanica", 4),
-                    ("Algoritmia y programacion 2", 3),
-                    ("Competencias comunicativas 2", 3),
-                    ("Ingles 2", 0)
-                ],
-                "III": [
-                    ("Electiva humanidades", 3),
-                    ("Calculo 3", 4),
-                    ("Fisica calor ondas", 4),
-                    ("Estructuras de datos 1", 3),
-                    ("POO", 3),
-                    ("Ingles 3", 0)
-                ],
-                "IV": [
-                    ("Electiva ciencias de la vida", 3),
-                    ("Ecuaciones Diferenciales", 3),
-                    ("Fisica electricidad", 4),
-                    ("Estructuras de datos 2", 3),
-                    ("Matematicas discretas", 3),
-                    ("Ingles 4", 0),
-                    ("Seminario de carrera 1", 0)
-                ],
-                "V": [
-                    ("Electiva ciencias basicas", 3),
-                    ("Analisis de datos", 4),
-                    ("Algoritmos y complejidad", 3),
-                    ("Estructuras discretas", 3),
-                    ("Diseño digital", 3),
-                    ("Ingles 5", 0),
-                    ("Examen comprehensivo 1", 0)
-                ],
-                "VI": [
-                    ("Electiva basica profesional", 3),
-                    ("Soluciones computacionales", 3),
-                    ("Bases de datos", 3),
-                    ("Redes", 3),
-                    ("Estructura del computador 1", 3),
-                    ("Ingles 6", 0)
-                ],
-                "VII": [
-                    ("Electiva etica", 3),
-                    ("Optimizacion", 3),
-                    ("Diseño de software 1", 3),
-                    ("Sistemas operativos", 3),
-                    ("Estructura del computador 2", 3),
-                    ("Ingles 7", 0)
-                ],
-                "VIII": [
-                    ("Electiva en redes", 2),
-                    ("Electiva profesional 1", 3),
-                    ("Diseño de software 2", 3),
-                    ("Electiva sociales", 3),
-                    ("Compiladores", 3),
-                    ("Ingles 8", 0),
-                    ("Electiva innovacion", 3)
-                ],
-                "IX": [
-                    ("Electiva en ciencias computacion", 3),
-                    ("Electiva profesional 2", 3),
-                    ("Electiva en filosofia", 3),
-                    ("Electiva gestion informatica", 3),
-                    ("Electiva formacion complementaria 1", 3),
-                    ("Examen comprehensivo 2", 0),
-                    ("Seminario de carrera 2", 0)
-                ],
-                "X": [
-                    ("Electiva en estudios del caribe", 3),
-                    ("Electiva profesional 3", 3),
-                    ("Proyecto final", 3),
-                    ("Electiva formacion complementaria 2", 3)
-                ]
-            }
     
     def volver_inicio(self):
         """Cierra la ventana de malla y vuelve a mostrar la ventana de inicio"""
@@ -399,7 +277,7 @@ class MallaCurricular:
             cursor='hand2'
         )
         btn_limpiar.pack(side=tk.LEFT, padx=10)
-        
+        """
         btn_guardar = tk.Button(
             button_frame,
             text="Guardar Progreso",
@@ -412,7 +290,7 @@ class MallaCurricular:
             cursor='hand2'
         )
         btn_guardar.pack(side=tk.LEFT, padx=10)
-        
+        """
         btn_estadisticas = tk.Button(
             button_frame,
             text="Ver Estadísticas",
@@ -444,13 +322,13 @@ class MallaCurricular:
                 else:
                     materias_bloqueadas.append(materia)
         
-        # Si no hay materias para aprobar
-        #if not materias_disponibles and not materias_bloqueadas:
-            #messagebox.showinfo(
-                #"Semestre completo",
-                #f"Ya tienes todas las materias del semestre {semestre} aprobadas."
-           # )
-            #return
+        #Si no hay materias para aprobar
+        if not materias_disponibles and not materias_bloqueadas:
+            messagebox.showinfo(
+                "Semestre completo",
+                f"Ya tienes todas las materias del semestre {semestre} aprobadas."
+            )
+            return
         
         # Si hay materias bloqueadas, informar al usuario
         if materias_bloqueadas:
@@ -556,15 +434,15 @@ class MallaCurricular:
         #if messagebox.askyesno("Confirmar", "¿Estás seguro de limpiar todo el progreso?"):
         self.materias_aprobadas.clear()
         self.actualizar_colores()
-    
+
     def guardar_progreso(self):
-        """Guarda el progreso en un archivo JSON"""
+        #Guarda el progreso en un archivo JSON
         with open('progreso_malla.json', 'w') as f:
             json.dump(list(self.materias_aprobadas), f)
         messagebox.showinfo("Guardado", "Progreso guardado exitosamente")
     
     def cargar_progreso(self):
-        """Carga el progreso desde un archivo JSON"""
+        #Carga el progreso desde un archivo JSON
         if os.path.exists('progreso_malla.json'):
             try:
                 with open('progreso_malla.json', 'r') as f:
@@ -572,6 +450,7 @@ class MallaCurricular:
                 self.actualizar_colores()
             except:
                 pass
+                
     
     def mostrar_estadisticas(self):
         """Muestra estadísticas del progreso"""

@@ -2,7 +2,7 @@ import json
 import networkx as nx
 import matplotlib.pyplot as plt
 
-ruta_archivo = "OneDrive/Desktop/Malla interactiva python/Electronica.json"
+ruta_archivo = "OneDrive/Desktop/Malla_interactiva_python/Electronica.json"
 
 def leerJson(ruta_archivo):
     with open(ruta_archivo, 'r', encoding='utf-8') as archivo:
