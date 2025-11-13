@@ -444,7 +444,7 @@ class MallaCurricular:
         for materia, boton in self.botones.items():
             if materia in self.materias_aprobadas:
                 # Aprobada - Verde
-                boton.configure(bg='#2ecc71', fg='white', font=('Arial', 8))
+                boton.configure(bg="#64d392", fg='white', font=('Arial', 8))
             elif self.puede_cursar(materia):
                 # Disponible - Blanco
                 boton.configure(bg='white', fg='black', font=('Arial', 8))
