@@ -8,7 +8,7 @@ class VentanaInicio:
         self.root = root
         self.root.title("Malla Interactiva UNINORTE")
         self.root.geometry("500x350")
-        self.root.configure(bg='#e8e8e8')
+        self.root.configure(bg="#c9cded")
         
         # Centrar la ventana
         self.centrar_ventana(500, 350)
@@ -18,7 +18,7 @@ class VentanaInicio:
             self.root,
             text="Bienvenid@ a la malla interactiva de UNINORTE",
             font=('Arial', 14, 'bold'),
-            bg='#e8e8e8',
+            bg='#c9cded',
             fg='#333333'
         )
         titulo.pack(pady=30)
@@ -28,11 +28,11 @@ class VentanaInicio:
             self.root,
             text="Seleccione la carrera:",
             font=('Arial', 14),
-            bg='#e8e8e8',
+            bg="#c9cded",
             fg='#333333'
         )
         label_carrera.pack(pady=10)
-        
+        self.root.option_add('*TCombobox*Listbox.font', ('Segoe UI', 12))
         # ComboBox para seleccionar carrera
         self.carreras = [
             "Seleccione",
@@ -48,8 +48,8 @@ class VentanaInicio:
             self.root,
             values=self.carreras,
             state='readonly',
-            font=('Arial', 11),
-            width=25
+            font=('Arial', 12),
+            width=27
         )
         self.combo_carrera.current(0)
         self.combo_carrera.pack(pady=10)
@@ -58,10 +58,10 @@ class VentanaInicio:
         btn_aceptar = tk.Button(
             self.root,
             text="Aceptar",
-            font=('Arial', 11),
-            bg='#f0f0f0',
+            font=('Arial', 12),
+            bg="#DFDFDF",
             fg='#333333',
-            padx=40,
+            padx=35,
             pady=10,
             relief=tk.RAISED,
             borderwidth=2,
@@ -74,8 +74,8 @@ class VentanaInicio:
         btn_salir = tk.Button(
             self.root,
             text="Salir",
-            font=('Arial', 11),
-            bg='#f0f0f0',
+            font=('Arial', 12),
+            bg="#DFDFDF",
             fg='#333333',
             padx=40,
             pady=10,
@@ -216,7 +216,7 @@ class MallaCurricular:
                 scrollable_frame,
                 text=semestre,
                 font=('Arial', 14, 'bold'),
-                bg='#4a90e2',
+                bg="#3498db",
                 fg='white',
                 padx=20,
                 pady=10,
@@ -245,18 +245,41 @@ class MallaCurricular:
                 btn.grid(row=row_idx, column=col_idx, padx=5, pady=5)
                 self.botones[materia] = btn
         
+        # Agregar el logo en la esquina superior derecha (después de crear los semestres)
+        try:
+            from PIL import Image, ImageTk
+            
+            # Cargar la imagen
+            logo_path = "OneDrive/Desktop/Malla_interactiva_python/logoUninorte.png"
+            imagen = Image.open(logo_path)
+            
+            # Redimensionar el logo
+            imagen = imagen.resize((175, 165), Image.Resampling.LANCZOS)
+            
+            # Convertir a PhotoImage
+            self.logo_photo = ImageTk.PhotoImage(imagen)
+            
+            # Crear label con el logo en el canvas (flotante, no afecta el grid)
+            logo_label = tk.Label(canvas, image=self.logo_photo, bg='#f0f0f0')
+            logo_label.place(relx=1.0, rely=0.0, anchor='ne', x=-35, y=-49)
+            
+        except FileNotFoundError:
+            print(f"No se encontró el archivo logoUninorte.png")
+        except Exception as e:
+            print(f"Error al cargar el logo: {e}")
+        
         canvas.pack(side="top", fill="both", expand=True)
         scrollbar.pack(side="bottom", fill="x")
         
         # Frame de botones inferiores
         button_frame = tk.Frame(self.root, bg='#f0f0f0')
-        button_frame.pack(side=tk.BOTTOM, pady=30)
+        button_frame.pack(side=tk.BOTTOM, pady=90, padx=(0.1, 0))
         
         btn_regresar = tk.Button(
             button_frame,
             text="Regresar",
             font=('Arial', 12, 'bold'),
-            bg='#95a5a6',
+            bg='#847f7e',
             fg='white',
             padx=30,
             pady=10,
@@ -269,7 +292,7 @@ class MallaCurricular:
             button_frame,
             text="Limpiar",
             font=('Arial', 12, 'bold'),
-            bg='#e74c3c',
+            bg="#847f7e",
             fg='white',
             padx=30,
             pady=10,
@@ -326,7 +349,7 @@ class MallaCurricular:
         if not materias_disponibles and not materias_bloqueadas:
             messagebox.showinfo(
                 "Semestre completo",
-                f"Ya tienes todas las materias del semestre {semestre} aprobadas."
+                f"Ya tienes todas las materias del semestre {semestre} aprobadas"
             )
             return
         
